@@ -26,6 +26,7 @@ class CreateDaftarHadirRdksTable extends Migration
             $table->string('ttd_url', 144);
             $table->boolean('rdk');
             $table->string('no_rek')->nullable();
+            $table->foreignId('kegiatan_id')->constrained('kegiatans');
             $table->timestamps();
         });
     }

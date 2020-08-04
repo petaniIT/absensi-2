@@ -23,6 +23,7 @@ class CreateDaftarHadirsTable extends Migration
             $table->string('golongan', 144)->nullable();
             $table->string('no_hp', 144);
             $table->integer('kehadiran');
+            $table->foreignId('kegiatan_id')->constrained('kegiatans');
             $table->string('ttd_url', 144);
             $table->timestamps();
         });
